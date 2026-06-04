@@ -1,0 +1,66 @@
+<section class="space-y-6">
+  <div>
+    <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Pengaturan</h2>
+    <p class="text-sm text-slate-500 mt-1">Konfigurasi profil dan preferensi aplikasi</p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
+    <div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 shadow-sm space-y-5">
+      <h3 class="text-lg font-semibold text-slate-900">Profil Usaha</h3>
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Nama Usaha</label>
+        <input type="text" id="setting-name" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+      </div>
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Pemilik</label>
+        <input type="text" id="setting-owner" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+      </div>
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Mata Uang</label>
+        <select id="setting-currency" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+          <option value="IDR">IDR - Rupiah Indonesia</option>
+          <option value="USD">USD - US Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="SGD">SGD - Singapore Dollar</option>
+        </select>
+      </div>
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Format Tanggal</label>
+        <select id="setting-date" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+          <option value="DD/MM/YYYY">DD/MM/YYYY</option>
+          <option value="MM/DD/YYYY">MM/DD/YYYY</option>
+          <option value="YYYY-MM-DD">YYYY-MM-DD</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 shadow-sm space-y-5">
+      <h3 class="text-lg font-semibold text-slate-900">Preferensi</h3>
+      <div class="flex items-center justify-between py-3 border-b border-slate-100">
+        <div>
+          <p class="text-sm font-semibold text-slate-700">Mode Gelap</p>
+          <p class="text-xs text-slate-400">Aktifkan tampilan gelap (dummy)</p>
+        </div>
+        <label class="relative inline-flex cursor-pointer items-center">
+          <input type="checkbox" id="setting-dark" class="peer sr-only">
+          <div class="h-6 w-11 rounded-full bg-slate-200 after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full"></div>
+        </label>
+      </div>
+      <div class="flex items-center justify-between py-3 border-b border-slate-100">
+        <div>
+          <p class="text-sm font-semibold text-slate-700">Notifikasi</p>
+          <p class="text-xs text-slate-400">Terima notifikasi transaksi (dummy)</p>
+        </div>
+        <label class="relative inline-flex cursor-pointer items-center">
+          <input type="checkbox" id="setting-notif" class="peer sr-only">
+          <div class="h-6 w-11 rounded-full bg-slate-200 after:absolute after:left-[2px] after:top-[2px] after:h-5 after:w-5 after:rounded-full after:bg-white after:transition-all after:content-[''] peer-checked:bg-blue-600 peer-checked:after:translate-x-full"></div>
+        </label>
+      </div>
+      <div class="pt-4">
+        <button id="btn-save-settings" class="rounded-2xl bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 active:scale-[0.98]">
+          💾 Simpan Pengaturan
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

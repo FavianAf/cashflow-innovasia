@@ -1,0 +1,60 @@
+<section class="space-y-6">
+  <div>
+    <h2 class="text-2xl md:text-3xl font-bold text-slate-950">Tambah Transaksi</h2>
+    <p class="text-sm text-slate-500 mt-1">Catat pemasukan atau pengeluaran baru</p>
+  </div>
+
+  <form id="tx-form" class="rounded-3xl border border-slate-200 bg-white p-5 md:p-6 shadow-sm space-y-5">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Tanggal</label>
+        <input type="date" id="tx-form-date" value="2026-06-04" required class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+      </div>
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Jenis Transaksi</label>
+        <select id="tx-form-type" required class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+          <option value="income">Pemasukan</option>
+          <option value="expense">Pengeluaran</option>
+        </select>
+      </div>
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Kategori</label>
+        <select id="tx-form-category" required class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+          <option value="">Pilih Kategori</option>
+        </select>
+      </div>
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Metode Pembayaran</label>
+        <select id="tx-form-method" required class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+          <option value="">Pilih Metode</option>
+          <option value="Cash">💵 Cash</option>
+          <option value="Transfer Bank">🏦 Transfer Bank</option>
+          <option value="QRIS">📱 QRIS</option>
+          <option value="E-Wallet">💳 E-Wallet</option>
+        </select>
+      </div>
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Deskripsi</label>
+        <input type="text" id="tx-form-desc" placeholder="Masukkan deskripsi" required class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+      </div>
+      <div>
+        <label class="mb-2 block text-sm font-semibold text-slate-700">Nominal (Rp)</label>
+        <input type="number" id="tx-form-amount" placeholder="0" min="0" required class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100">
+      </div>
+    </div>
+
+    <div>
+      <label class="mb-2 block text-sm font-semibold text-slate-700">Catatan</label>
+      <textarea id="tx-form-note" rows="3" placeholder="Tambahkan catatan (opsional)" class="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-4 focus:ring-blue-100 resize-none"></textarea>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-3 pt-2">
+      <button type="submit" class="rounded-2xl bg-blue-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 active:scale-[0.98]">
+        💾 Simpan Transaksi
+      </button>
+      <button type="button" id="tx-form-reset" class="rounded-2xl border border-slate-200 bg-white px-6 py-2.5 text-sm font-semibold text-slate-700 transition hover:bg-slate-50 active:scale-[0.98]">
+        🔄 Reset
+      </button>
+    </div>
+  </form>
+</section>

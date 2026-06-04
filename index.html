@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cashflow Harian</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8'
+            }
+          },
+          boxShadow: {
+            soft: '0 18px 45px rgba(15, 23, 42, 0.08)'
+          },
+          borderRadius: {
+            '3xl': '1.5rem'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-slate-50 min-h-screen text-slate-950">
+
+  <aside id="sidebar" class="fixed inset-y-0 left-0 hidden w-72 border-r border-slate-200 bg-white/90 p-4 backdrop-blur-xl lg:block z-40">
+    <div class="mb-8 px-4">
+      <h1 class="text-xl font-bold text-slate-950">Cashflow Harian</h1>
+      <p class="text-xs text-slate-400 mt-1">Manajemen Keuangan Harian</p>
+    </div>
+    <nav id="sidebar-menu" class="flex flex-col gap-1"></nav>
+  </aside>
+
+  <div class="lg:ml-72 flex flex-col min-h-screen">
+
+    <header id="topbar" class="sticky top-0 z-30 border-b border-slate-200 bg-white/80 backdrop-blur-xl">
+      <div class="flex items-center justify-between px-4 py-3 md:px-6">
+        <div class="flex items-center gap-3">
+          <h2 class="text-lg md:hidden font-bold text-slate-950">Cashflow Harian</h2>
+          <div id="topbar-title" class="hidden md:block text-sm font-medium text-slate-500"></div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div id="topbar-date" class="text-xs text-slate-400 hidden sm:block"></div>
+          <div class="h-9 w-9 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white text-sm font-bold">U</div>
+        </div>
+      </div>
+    </header>
+
+    <main id="app" class="flex-1 p-4 md:p-6 lg:p-8">
+      <div class="flex items-center justify-center h-64">
+        <div class="text-center">
+          <div class="inline-block h-8 w-8 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent"></div>
+          <p class="mt-3 text-sm text-slate-400">Memuat...</p>
+        </div>
+      </div>
+    </main>
+
+  </div>
+
+  <nav id="mobile-nav" class="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/90 px-2 py-2 backdrop-blur-xl lg:hidden">
+    <div id="mobile-menu" class="flex items-center justify-around"></div>
+  </nav>
+
+  <div id="toast-container" class="fixed top-4 right-4 z-[100] flex flex-col gap-2"></div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/menu.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
